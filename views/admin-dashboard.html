@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Telemedicine App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/admin-dashboard">Dashboard</a>
+        <a href="#" id="logoutLink">Logout</a>
+    </nav>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div id="userManagement">
+            <h2>User Management</h2>
+            <ul id="userList"></ul>
+        </div>
+        <div id="appointmentManagement">
+            <h2>Appointment Management</h2>
+            <ul id="appointmentList"></ul>
+        </div>
+
+        <h2>Patient Management</h2>
+        <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search patients by name or email">
+        <select id="statusFilter">
+            <option value="">All</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select>
+        <button type="submit">Search</button>
+        </form>
+
+        <table id="patientTable">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
